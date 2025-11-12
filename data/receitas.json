@@ -1,0 +1,41 @@
+[
+  {
+    "id": "pao_queijo",
+    "nome": "Pão de Queijo",
+    "regiao": "Sudeste",
+    "categoria": "salgado",
+    "ingredientes": [
+      "polvilho azedo",
+      "leite",
+      "óleo",
+      "ovos",
+      "queijo minas",
+      "sal"
+    ],
+    "preparo": "Misture ingredientes, molde bolinhas e asse até dourar."
+  },
+  {
+    "id": "acaraje",
+    "nome": "Acarajé",
+    "regiao": "Nordeste",
+    "categoria": "salgado",
+    "ingredientes": [
+      "feijão-fradinho",
+      "cebola",
+      "sal",
+      "azeite de dendê"
+    ],
+    "preparo": "Bata a massa, frite no dendê e sirva com vatapá e camarão."
+  },
+  {
+    "id": "chimarrao",
+    "nome": "Chimarrão",
+    "regiao": "Sul",
+    "categoria": "bebida",
+    "ingredientes": [
+      "erva-mate",
+      "água quente"
+    ],
+    "preparo": "Complete a cuia com erva, adicione água quente sem ferver e sirva na bomba."
+  }
+]

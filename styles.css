@@ -1,0 +1,238 @@
+/* ===== Paleta "Brasil à Mesa" =====
+   Verde-terra (principal), Terracota (secundária), Dourado suave (acento),
+   Neutros: bege/linho e branco quebrado. Nada de fontes externas.
+*/
+:root{
+  --green:#0e3b2c;        /* verde-jade/terra escuro (principal) */
+  --green-600:#14503b;    /* hover/variação */
+  --terracotta:#b44d34;   /* vermelho-tijolo/cerâmica (secundário) */
+  --gold:#c9a43a;         /* amarelo-ouro suave (acento) */
+  --linen:#ece5d8;        /* bege linho/papel kraft claro */
+  --offwhite:#f7f5f0;     /* branco quebrado */
+  --ink:#0b0b0b;          /* quase preto para textos sobre fundo claro */
+
+  /* Base para o tema escuro aconchegante usado nos cards e barras */
+  --bg:#121311;
+  --panel:#191a18;
+  --card:#1e1f1c;
+  --card-elev:#242621;
+  --text:#f0ede6;
+  --muted:#cfc9bc;
+  --line:#2d2f29;
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  background:linear-gradient(0deg,var(--bg),var(--panel));
+  color:var(--text);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; /* sans elegante e legível */
+}
+
+/* ===== Topbar ===== */
+.topbar{
+  position:sticky; top:0; z-index:20;
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center;
+  gap:1rem; padding:1rem;
+  background:var(--green);
+  color:var(--offwhite);
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+
+/* Logo tipográfica — títulos em "serif elegante" via fallback local */
+.brand .logo-text{
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif; /* se quiser serif real, coloque arquivos locais e @font-face */
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: .3px;
+  color: var(--offwhite);
+  /* filete dourado sutil */
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+
+/* Navegação curta */
+.nav{ display:flex; gap:1rem; justify-content:center }
+.nav a{
+  color:var(--offwhite); text-decoration:none; font-weight:600; opacity:.9;
+  padding:.35rem .5rem; border-radius:.4rem;
+}
+.nav a:hover{ background:rgba(255,255,255,.08); opacity:1 }
+
+/* Ícones à direita (favoritos e perfil) */
+.icons{ display:flex; gap:.6rem; justify-content:flex-end }
+.icon-btn{
+  width:36px; height:36px; display:grid; place-items:center;
+  color:var(--offwhite); background:transparent; border:0; border-radius:.5rem; cursor:pointer
+}
+.icon-btn:hover{ background:rgba(255,255,255,.12) }
+
+/* ===== HERO ===== */
+.hero{ position:relative; min-height:48vh; display:grid; place-items:center; overflow:hidden }
+.hero-media{
+  position:absolute; inset:0;
+  background:url("assets/hero.jpg") center/cover no-repeat;
+  filter:saturate(1.05) contrast(1.05) brightness(.95);
+}
+.hero::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55));
+}
+.hero-overlay{
+  position:relative; z-index:1; text-align:center;
+  max-width: min(920px, 92vw);
+  color: var(--offwhite);
+  padding: 2rem 1rem;
+}
+.hero-title{
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: clamp(1.8rem, 2.8vw + 1rem, 3rem);
+  margin:.2rem 0 .6rem;
+  text-shadow: 0 2px 18px rgba(0,0,0,.45);
+}
+.hero-tag{
+  font-size: clamp(.98rem, 1.2vw + .4rem, 1.2rem);
+  opacity:.95; margin:0 0 1rem 0;
+}
+.btn-cta{
+  display:inline-block; font-weight:700;
+  background: var(--terracotta);
+  color: var(--offwhite);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: .7rem 1rem; border-radius:.6rem; text-decoration:none;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
+.btn-cta:hover{
+  background: color-mix(in srgb, var(--terracotta) 85%, white 15%);
+}
+
+/* ===== Toolbar funcional (busca, filtro, novo) ===== */
+.toolbar{
+  position:sticky; top:64px; z-index:19;
+  display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; justify-content:center;
+  padding:.8rem 1rem; background:var(--panel); border-bottom:1px solid var(--line);
+}
+.search{ display:flex; align-items:stretch }
+.search input{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34; border-right:0;
+  border-radius:.6rem 0 0 .6rem; padding:.6rem .8rem; min-width:360px; outline:none
+}
+.search input::placeholder{ color:#bdb6a6 }
+.search-btn{
+  width:46px; display:grid; place-items:center; cursor:pointer;
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34; border-left:0;
+  border-radius:0 .6rem .6rem 0;
+}
+.search-btn:hover{ border-color:var(--gold); box-shadow:0 0 0 2px rgba(201,164,58,.16) }
+.toolbar select,.toolbar button{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34; border-radius:.6rem; padding:.6rem .8rem; outline:none
+}
+.toolbar button{ font-weight:700; cursor:pointer }
+.toolbar button:hover{ border-color:var(--gold); box-shadow:0 0 0 2px rgba(201,164,58,.16) }
+
+/* ===== Cards (Receitas em destaque) ===== */
+.grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1rem; padding:1rem
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:.9rem;
+  padding:1rem;
+  display:flex; flex-direction:column; gap:.7rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.25);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.35) }
+.card h3{
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  color:var(--offwhite); margin:.2rem 0
+}
+.card .meta{ color:var(--muted); font-size:.86rem }
+.tags{ display:flex; gap:.45rem; flex-wrap:wrap }
+.tag{
+  background:#2b2d26; border:1px solid #3a3d34; color:#efece4;
+  padding:.22rem .55rem; border-radius:999px; font-size:.75rem
+}
+.card menu{ display:flex; justify-content:space-between; align-items:center }
+.card .left-actions{ display:flex; gap:.4rem }
+.card .fav-toggle{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34;
+  border-radius:.6rem; padding:.5rem .7rem; cursor:pointer
+}
+.card .fav-toggle.active{ border-color:var(--gold); color:var(--gold) }
+.card menu button.edit{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34;
+  border-radius:.6rem; padding:.55rem .85rem; cursor:pointer
+}
+.card menu button:hover{ border-color:var(--gold); box-shadow:0 0 0 2px rgba(201,164,58,.16) }
+
+/* ===== Dialog (criar/editar) ===== */
+dialog::backdrop{ background:rgba(0,0,0,.55) }
+dialog{
+  background:var(--card-elev); color:var(--text);
+  border:1px solid var(--line); border-radius:.9rem; padding:0
+}
+#form{ display:flex; flex-direction:column; gap:.75rem; padding:1rem; width:min(720px,90vw) }
+#dlg h2{
+  margin:0 0 .5rem 0; color:var(--offwhite);
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+}
+#form label{ display:flex; flex-direction:column; gap:.25rem; color:#e8e3d8 }
+#form input,#form select,#form textarea{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34; border-radius:.6rem; padding:.6rem; outline:none
+}
+#form input::placeholder,#form textarea::placeholder{ color:#bdb6a6 }
+#form menu{ display:flex; gap:.5rem; justify-content:flex-end; margin:0; padding:0 }
+#form menu button{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34; border-radius:.6rem; padding:.6rem .95rem; cursor:pointer; font-weight:700
+}
+#form menu button:hover{ border-color:var(--gold); box-shadow:0 0 0 2px rgba(201,164,58,.16) }
+#btn-del{ background:#3a2320; border-color:#5a3a36 }
+#btn-del:hover{ border-color:#e67c73; box-shadow:0 0 0 2px rgba(230,124,115,.14) }
+
+/* ===== Dialog perfil ===== */
+#dlgProfile{ background:var(--card-elev); border:1px solid var(--line); border-radius:.9rem; padding:0 }
+.profile{ padding:1rem; width:min(520px,90vw) }
+.profile h3{
+  margin:.2rem 0 1rem; color:var(--offwhite);
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+}
+.profile menu{ display:flex; gap:.5rem; justify-content:flex-end }
+
+/* ===== Seções placeholder (ancoras) ===== */
+.placeholder{ min-height:1px }
+
+/* ===== Rodapé ===== */
+.footer{
+  background:var(--green);
+  color:var(--offwhite);
+  padding:1rem; text-align:center;
+}
+/* ===== Páginas/Seções ===== */
+.page{ display:block }
+.page[hidden]{ display:none !important }
+
+.container{ max-width:1100px; margin:0 auto; padding:1rem }
+.section-title{
+  font-family: "Playfair Display","Times New Roman",Georgia,serif;
+  font-size:1.8rem; margin:1rem 0 .75rem; color:var(--offwhite)
+}
+.section-subtitle{ margin:.5rem 0 0 0; color:var(--muted) }
+
+/* Regiões */
+.region-buttons{ display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem }
+.region-btn{
+  background:#2a2c26; color:var(--offwhite); border:1px solid #3a3d34;
+  padding:.55rem .8rem; border-radius:.6rem; cursor:pointer; font-weight:700
+}
+.region-btn:hover{ border-color:var(--gold); box-shadow:0 0 0 2px rgba(201,164,58,.16) }
+.region-btn.active{ border-color:var(--gold); color:var(--gold) }
+
+/* Prosa (Histórias/Sobre) */
+.prose .container{ max-width:900px }
+.prose h2, .prose h3{
+  font-family: "Playfair Display","Times New Roman",Georgia,serif;
+}
+.prose p{ line-height:1.65; color:var(--muted) }

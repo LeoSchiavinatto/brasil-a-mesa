@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brasil à Mesa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="topbar">
+    <div class="brand" title="Brasil à Mesa">
+      <span class="logo-text">Brasil à Mesa</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#inicio" data-nav>Início</a>
+      <a href="#receitas" data-nav>Receitas</a>
+      <a href="#regioes" data-nav>Regiões</a>
+      <a href="#historias" data-nav>Histórias</a>
+      <a href="#sobre" data-nav>Sobre</a>
+    </nav>
+
+    <div class="icons">
+      <button id="btn-favs" aria-label="Mostrar apenas salvos" class="icon-btn" title="Somente salvos (tecla F)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+      <button id="btn-profile" aria-label="Perfil local" class="icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PÁGINA: Início / Hero -->
+  <section id="inicio" class="page">
+    <section id="hero" class="hero">
+      <div class="hero-media" role="img" aria-label="Mesa rústica com moqueca, farofa e ingredientes frescos"></div>
+      <div class="hero-overlay">
+        <h1 class="hero-title">Descubra o sabor da verdadeira culinária brasileira</h1>
+        <p class="hero-tag">Onde cada receita é um pedaço do nosso país.</p>
+        <div class="hero-cta">
+          <a href="#receitas" class="btn-cta" data-nav>Explore as Receitas</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- PÁGINA: Receitas (lista padrão com busca/filtros/novo) -->
+  <section id="receitas" class="page" hidden>
+    <section class="toolbar">
+      <div class="search">
+        <input id="q" placeholder="Buscar por nome, ingrediente ou categoria" />
+        <button id="btn-search" class="search-btn" aria-label="Buscar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+
+      <select id="regiao" aria-label="Filtrar por região">
+        <option value="">Todas as regiões</option>
+        <option>Norte</option><option>Nordeste</option><option>Centro-Oeste</option>
+        <option>Sudeste</option><option>Sul</option>
+      </select>
+
+      <button id="btn-add">Nova receita</button>
+    </section>
+
+    <main>
+      <section id="lista" class="grid" aria-label="Receitas"></section>
+    </main>
+  </section>
+
+  <!-- PÁGINA: Regiões -->
+  <section id="regioes" class="page" hidden>
+    <div class="container">
+      <h2 class="section-title">Explore por Região</h2>
+      <div class="region-buttons">
+        <button class="region-btn" data-region="Norte">Norte</button>
+        <button class="region-btn" data-region="Nordeste">Nordeste</button>
+        <button class="region-btn" data-region="Centro-Oeste">Centro-Oeste</button>
+        <button class="region-btn" data-region="Sudeste">Sudeste</button>
+        <button class="region-btn" data-region="Sul">Sul</button>
+      </div>
+
+      <h3 class="section-subtitle" id="region-heading">Selecione uma região</h3>
+      <section id="grid-regiao" class="grid" aria-label="Receitas por região"></section>
+    </div>
+  </section>
+
+  <!-- PÁGINA: Histórias -->
+  <section id="historias" class="page prose" hidden>
+    <div class="container">
+      <h2 class="section-title">Histórias à Mesa</h2>
+
+      <article>
+        <h3>Norte — Tacacá e a Roda da Tarde</h3>
+        <p>Servido em cuias de origem indígena, o tacacá mistura tucupi, jambu e camarão seco. Nas cidades amazônicas, o vapor do tucupi em fim de tarde virou rito social: acalma a pressa, aproxima vizinhos, embala conversas na calçada. Na história da região, o tacacá é ponte entre saberes ancestrais e a vida urbana, lembrando que a cozinha é onde a floresta também fala.</p>
+      </article>
+
+      <article>
+        <h3>Nordeste — Acarajé e o Terreiro de Sabores</h3>
+        <p>Do tabuleiro das baianas, o acarajé atravessou gerações como símbolo de resistência e identidade afro-brasileira. Feito de feijão-fradinho e frito no dendê, carrega oferendas, fé e rua: é alimento, devoção e trabalho. Moldou economias familiares e narrou a história do Recôncavo com cebola, camarão e pimenta.</p>
+      </article>
+
+      <article>
+        <h3>Centro-Oeste — Pequi, o Fruto que Perfuma a Memória</h3>
+        <p>O arroz com pequi é relato de território. O aroma marcante acompanha mutirões, festas e colheitas. Entre cerrado e panelas de ferro, o pequi traduz a vida que resiste à seca, reforçando laços de reciprocidade: dividir um fruto é partilhar a estação.</p>
+      </article>
+
+      <article>
+        <h3>Sudeste — Feijoada de Quintal e Samba</h3>
+        <p>Entre rodas de samba e domingos compridos, a feijoada tornou-se encontro. Cozida lenta, afinou as vozes dos bairros, das escolas de samba e dos botecos. Em cada panela grande, a história da migração, do trabalho e da festa. É prato que convoca a mesa grande e celebra a mistura que forjou a região.</p>
+      </article>
+
+      <article>
+        <h3>Sul — Churrasco, Erva-Mate e a Roda do Fogo</h3>
+        <p>No pátio, o braseiro reúne gerações: o churrasco é conversa atravessada pelo vento frio, pela taça de chimarrão que circula. Entre cortes bovinos, costelas e a erva-mate que aquece a mão, firmou identidades de fronteira, trabalho de campo e acolhimento.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PÁGINA: Sobre -->
+  <section id="sobre" class="page prose" hidden>
+    <div class="container">
+      <h2 class="section-title">Sobre — A Importância Cultural da Nossa Mesa</h2>
+      <p>O Brasil é culinária em movimento: rios, serras, cerrado, pampas, mata e mar deixam sabores na língua e histórias nas panelas. Cada região reúne técnicas, ingredientes e afetos que nasceram do encontro entre povos indígenas, matrizes africanas e tradições europeias, com fluxos migratórios mais recentes. Essa diversidade faz da nossa cozinha um mapa vivo.</p>
+      <p>Valorizar a diferença gastronômica é reconhecer saberes, fortalecer economias locais e preservar biomas. Ao colecionar receitas, contamos memórias — de quintal, feira e festa de rua. “Brasil à Mesa” nasce para celebrar essa pluralidade: acessível, acolhedora e autoral. Aqui, cada receita é documento afetivo e convite à descoberta.</p>
+    </div>
+  </section>
+
+  <!-- Dialog criar/editar -->
+  <dialog id="dlg">
+    <form id="form">
+      <h2 id="dlg-titulo">Nova receita</h2>
+      <label>Nome <input name="nome" required /></label>
+      <label>Região
+        <select name="regiao" required>
+          <option>Norte</option><option>Nordeste</option><option>Centro-Oeste</option>
+          <option>Sudeste</option><option>Sul</option>
+        </select>
+      </label>
+      <label>Categoria <input name="categoria" placeholder="doce, salgado, bebida" /></label>
+      <label>Ingredientes (um por linha) <textarea name="ingredientes" rows="4" required></textarea></label>
+      <label>Modo de preparo <textarea name="preparo" rows="5" required></textarea></label>
+      <input type="hidden" name="id" />
+      <menu>
+        <button type="button" id="btn-del" class="danger" hidden>Excluir</button>
+        <button type="reset">Limpar</button>
+        <button type="submit">Salvar</button>
+        <button type="button" id="btn-close">Fechar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Dialog perfil -->
+  <dialog id="dlgProfile">
+    <div class="profile">
+      <h3>Perfil local</h3>
+      <p id="stats"></p>
+      <menu>
+        <button id="btn-clear">Limpar dados (reset)</button>
+        <button id="btn-close-profile">Fechar</button>
+      </menu>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <small>© Brasil à Mesa — Saboreie a tradição.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
