@@ -1,41 +1,202 @@
 [
   {
-    "id": "pao_queijo",
-    "nome": "Pão de Queijo",
-    "regiao": "Sudeste",
-    "categoria": "salgado",
-    "ingredientes": [
-      "polvilho azedo",
-      "leite",
-      "óleo",
-      "ovos",
-      "queijo minas",
-      "sal"
-    ],
-    "preparo": "Misture ingredientes, molde bolinhas e asse até dourar."
+    "id": "1",
+    "nome": "Moqueca Baiana",
+    "regiao": "Nordeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["peixe branco", "leite de coco", "azeite de dendê", "cebola", "pimentão", "coentro"],
+    "preparo": "Refogue cebola e pimentão no azeite de dendê, adicione o peixe e o leite de coco e cozinhe até engrossar."
   },
   {
-    "id": "acaraje",
+    "id": "2",
     "nome": "Acarajé",
     "regiao": "Nordeste",
-    "categoria": "salgado",
-    "ingredientes": [
-      "feijão-fradinho",
-      "cebola",
-      "sal",
-      "azeite de dendê"
-    ],
-    "preparo": "Bata a massa, frite no dendê e sirva com vatapá e camarão."
+    "categoria": "Aperitivo",
+    "ingredientes": ["feijão-fradinho", "cebola", "sal", "azeite de dendê", "camarão seco", "vatapá"],
+    "preparo": "Bata o feijão com cebola, modele em bolinhos e frite em azeite de dendê. Recheie com camarão e vatapá."
   },
   {
-    "id": "chimarrao",
+    "id": "3",
+    "nome": "Baião de Dois",
+    "regiao": "Nordeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["arroz", "feijão-verde", "queijo coalho", "carne seca", "cebola", "coentro"],
+    "preparo": "Cozinhe o feijão com carne seca, acrescente o arroz e finalize com queijo coalho e coentro."
+  },
+  {
+    "id": "4",
+    "nome": "Sarapatel",
+    "regiao": "Nordeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["miúdos de porco", "sangue coagulado", "vinagre", "cebola", "pimenta", "coentro"],
+    "preparo": "Cozinhe as miúdas com vinagre, refogue com cebola e temperos, acrescente o sangue e cozinhe até engrossar."
+  },
+  {
+    "id": "5",
+    "nome": "Cuscuz Nordestino",
+    "regiao": "Nordeste",
+    "categoria": "Café da Manhã",
+    "ingredientes": ["fubá", "água", "sal", "manteiga", "queijo", "carne seca"],
+    "preparo": "Umedeça o fubá com água salgada, cozinhe na cuscuzeira e sirva com manteiga, queijo e carne seca."
+  },
+  {
+    "id": "6",
+    "nome": "Feijoada",
+    "regiao": "Sudeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["feijão preto", "carne seca", "paio", "costelinha", "laranja", "arroz", "couve"],
+    "preparo": "Cozinhe o feijão e as carnes defumadas até amaciarem e sirva com arroz e couve refogada."
+  },
+  {
+    "id": "7",
+    "nome": "Virado à Paulista",
+    "regiao": "Sudeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["feijão", "farinha de mandioca", "bisteca", "ovo", "banana frita", "linguiça"],
+    "preparo": "Refogue o feijão com farinha e sirva com bisteca, ovo frito, banana e linguiça."
+  },
+  {
+    "id": "8",
+    "nome": "Pão de Queijo",
+    "regiao": "Sudeste",
+    "categoria": "Lanche",
+    "ingredientes": ["polvilho azedo", "queijo minas", "leite", "óleo", "ovos", "sal"],
+    "preparo": "Misture todos os ingredientes, modele em bolinhas e asse até dourar."
+  },
+  {
+    "id": "9",
+    "nome": "Pastel de Feira",
+    "regiao": "Sudeste",
+    "categoria": "Lanche",
+    "ingredientes": ["farinha de trigo", "cachaça", "vinagre", "carne moída", "queijo", "presunto"],
+    "preparo": "Faça a massa com farinha e líquidos, recheie e frite em óleo quente até dourar."
+  },
+  {
+    "id": "10",
+    "nome": "Frango com Quiabo",
+    "regiao": "Sudeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["frango", "quiabo", "alho", "cebola", "tomate", "salsinha", "açafrão"],
+    "preparo": "Refogue o frango com temperos, acrescente o quiabo e cozinhe até amaciar."
+  },
+  {
+    "id": "11",
+    "nome": "Tacacá",
+    "regiao": "Norte",
+    "categoria": "Sopa",
+    "ingredientes": ["tucupi", "goma de tapioca", "camarão seco", "jambu", "alho", "sal"],
+    "preparo": "Ferva o tucupi, acrescente o jambu e o camarão seco. Sirva quente com goma de tapioca."
+  },
+  {
+    "id": "12",
+    "nome": "Pato no Tucupi",
+    "regiao": "Norte",
+    "categoria": "Prato Principal",
+    "ingredientes": ["pato", "tucupi", "jambu", "alho", "cebola", "cheiro-verde"],
+    "preparo": "Cozinhe o pato no tucupi com jambu e temperos até a carne ficar macia."
+  },
+  {
+    "id": "13",
+    "nome": "Maniçoba",
+    "regiao": "Norte",
+    "categoria": "Prato Principal",
+    "ingredientes": ["folhas de maniço", "carne de porco", "linguiça", "toucinho", "charque"],
+    "preparo": "Cozinhe as folhas por uma semana, depois acrescente as carnes e cozinhe até ficar pronta."
+  },
+  {
+    "id": "14",
+    "nome": "Pirarucu de Casaca",
+    "regiao": "Norte",
+    "categoria": "Prato Principal",
+    "ingredientes": ["pirarucu", "banana-da-terra", "farinha", "tomate", "cebola", "cheiro-verde"],
+    "preparo": "Desfie o pirarucu, frite com temperos e sirva com banana frita e farinha."
+  },
+  {
+    "id": "15",
+    "nome": "Açaí na Tigela",
+    "regiao": "Norte",
+    "categoria": "Sobremesa",
+    "ingredientes": ["açaí", "xarope de guaraná", "banana", "granola", "mel"],
+    "preparo": "Bata o açaí com xarope e sirva com banana, granola e mel."
+  },
+  {
+    "id": "16",
+    "nome": "Churrasco Gaúcho",
+    "regiao": "Sul",
+    "categoria": "Prato Principal",
+    "ingredientes": ["carne bovina", "sal grosso", "linguiça", "frango", "farinha de mandioca"],
+    "preparo": "Tempere as carnes com sal grosso e asse na brasa, servindo com farinha de mandioca."
+  },
+  {
+    "id": "17",
+    "nome": "Barreado",
+    "regiao": "Sul",
+    "categoria": "Prato Principal",
+    "ingredientes": ["carne bovina", "bacon", "cebola", "alho", "cominho", "louro", "banana"],
+    "preparo": "Cozinhe a carne lentamente por horas até desmanchar, sirva com banana e farinha."
+  },
+  {
+    "id": "18",
+    "nome": "Sopa de Capeletti",
+    "regiao": "Sul",
+    "categoria": "Sopa",
+    "ingredientes": ["capeletti", "frango", "creme de leite", "noz-moscada", "queijo parmesão"],
+    "preparo": "Cozinhe o capeletti em caldo de frango, acrescente creme de leite e finalize com queijo."
+  },
+  {
+    "id": "19",
     "nome": "Chimarrão",
     "regiao": "Sul",
-    "categoria": "bebida",
-    "ingredientes": [
-      "erva-mate",
-      "água quente"
-    ],
-    "preparo": "Complete a cuia com erva, adicione água quente sem ferver e sirva na bomba."
+    "categoria": "Bebida Tradicional",
+    "ingredientes": ["erva-mate", "água quente"],
+    "preparo": "Coloque a erva-mate na cuia, insira a bomba e adicione água quente, sem ferver."
+  },
+  {
+    "id": "20",
+    "nome": "Cuca de Fruta",
+    "regiao": "Sul",
+    "categoria": "Sobremesa",
+    "ingredientes": ["farinha de trigo", "manteiga", "açúcar", "ovos", "frutas", "fermento"],
+    "preparo": "Faça a massa com farinha, ovos e fermento, cubra com frutas e farofa doce e asse."
+  },
+  {
+    "id": "21",
+    "nome": "Pamonha",
+    "regiao": "Centro-Oeste",
+    "categoria": "Doce",
+    "ingredientes": ["milho verde", "leite", "açúcar", "coco ralado", "sal"],
+    "preparo": "Rale o milho, misture com leite e açúcar e cozinhe embrulhado na própria palha."
+  },
+  {
+    "id": "22",
+    "nome": "Arroz com Pequi",
+    "regiao": "Centro-Oeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["arroz", "pequi", "frango", "linguiça", "tomate", "cebola", "coentro"],
+    "preparo": "Refogue o pequi com temperos, acrescente arroz e água e cozinhe até secar."
+  },
+  {
+    "id": "23",
+    "nome": "Galinhada",
+    "regiao": "Centro-Oeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["frango", "arroz", "açafrão", "pequi", "milho", "pimentão", "cheiro-verde"],
+    "preparo": "Refogue o frango com temperos, acrescente arroz e água e cozinhe até secar."
+  },
+  {
+    "id": "24",
+    "nome": "Empadão Goiano",
+    "regiao": "Centro-Oeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["farinha", "frango", "linguiça", "palmito", "queijo", "tomate", "ovos"],
+    "preparo": "Prepare a massa, recheie com os ingredientes e asse até dourar."
+  },
+  {
+    "id": "25",
+    "nome": "Maria Isabel",
+    "regiao": "Centro-Oeste",
+    "categoria": "Prato Principal",
+    "ingredientes": ["arroz", "carne seca", "cebola", "alho", "tomate", "pimenta-de-cheiro"],
+    "preparo": "Refogue a carne seca com temperos, acrescente arroz e água e cozinhe até secar."
   }
 ]
