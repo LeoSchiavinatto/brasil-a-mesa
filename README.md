@@ -1,72 +1,88 @@
-📘 Brasil à Mesa
+# 📘 Brasil à Mesa
 
-Catálogo digital de receitas brasileiras por região
+### Catálogo interativo de receitas brasileiras
 
-Aplicação web estática desenvolvida em HTML, CSS e JavaScript, focada em organizar e preservar receitas típicas do Brasil, destacando a importância cultural e gastronômica de cada região.
+O **Brasil à Mesa** é uma aplicação web estática que organiza e
+apresenta receitas tradicionais de todas as regiões do Brasil.\
+O projeto funciona totalmente no navegador, sem servidor, e permite
+cadastrar, editar, salvar e explorar receitas com filtros inteligentes.
 
-🎯 Objetivo
+------------------------------------------------------------------------
 
-“Brasil à Mesa” foi criado para servir como um catálogo simples, rápido e visualmente agradável de receitas brasileiras, permitindo explorar pratos tradicionais por região, ingredientes, categoria e modo de preparo.
-Além disso, a aplicação reforça o valor cultural da culinária brasileira através de textos e histórias regionais.
+## 🎯 O que o projeto faz
 
-🌎 Funcionalidades Principais
+-   Exibe uma **lista dinâmica de receitas** com busca e filtro por
+    região.\
+-   Permite **criar, editar e excluir** receitas diretamente na
+    interface.\
+-   Armazena tudo automaticamente no **localStorage**, funcionando
+    offline.\
+-   Possui sistema de **favoritos (★)**.\
+-   Exibe um **modo de leitura completa** com quebra de linha real e
+    botão de copiar.\
+-   Inclui páginas especiais:
+    -   **Regiões** --- receitas por Norte, Nordeste, Centro-Oeste,
+        Sudeste e Sul.\
+    -   **Histórias** --- textos culturais sobre a culinária regional.\
+    -   **Sobre** --- apresentação do projeto.
 
-🔍 Exploração e filtros
+------------------------------------------------------------------------
 
-Busca por nome, ingrediente ou categoria.
+## 🧩 Tecnologias utilizadas
 
-Filtro por região (Norte, Nordeste, Centro-Oeste, Sudeste e Sul).
+-   **HTML5**
+-   **CSS3 (design próprio)**
+-   **JavaScript puro (SPA por hash + CRUD + favoritos)**
+-   **localStorage**
+-   **JSON**
+-   **GitHub Pages** (deploy)
 
-Filtro “★ Salvos” para ver apenas receitas favoritas.
+------------------------------------------------------------------------
 
-📖 Gestão das receitas
+## 📁 Estrutura
 
-Criar novas receitas diretamente pela interface.
+    brasil-a-mesa/
+    │
+    ├── index.html
+    ├── styles.css
+    ├── app.js
+    │
+    ├── data/
+    │   └── receitas.json
+    │
+    └── assets/
+        └── hero.jpg
 
-Editar receitas existentes.
+------------------------------------------------------------------------
 
-Excluir receitas.
+## 🚀 Como rodar
 
-Dados armazenados no navegador via localStorage (offline e persistente).
+Basta abrir o arquivo:
 
-⭐ Favoritos
+    index.html
 
-Marcar/desmarcar receitas como favoritas.
+Para evitar bloqueios de leitura do JSON, recomenda-se usar um servidor
+local:
 
-Estado salvo localmente (persistente mesmo após fechar o navegador).
+    npx serve .
 
-📘 Leitura avançada do preparo
+ou:
 
-Cards mostram apenas um resumo.
+    python3 -m http.server
 
-Botão “Ver preparo completo” abre um dialog estilizado.
+------------------------------------------------------------------------
 
-Quebra de linha real (white-space: pre-wrap).
+## 🌐 Publicação
 
-Botão “Copiar preparo” para área de transferência.
+Projeto publicado via GitHub Pages:\
+https://SEU-USUARIO.github.io/brasil-a-mesa
 
-🗺️ Navegação por regiões
+A publicação atualiza automaticamente quando você der *push*.
 
-Página dedicada “Regiões”.
+------------------------------------------------------------------------
 
-Cada botão exibe receitas específicas daquela região.
+## 🔄 Comandos para atualizar o GitHub
 
-📚 Histórias e Sobre
-
-Textos culturais explicando origem e importância de pratos de cada região.
-
-Página “Sobre o projeto” com objetivo e tecnologias.
-
-🧩 Tecnologias utilizadas
-
-HTML5 — Estrutura da aplicação (SPA simples via hash).
-
-CSS3 (tema escuro, paleta inspirada no Brasil, hero com imagem de fundo, grid de cards).
-
-JavaScript (ES6+) — Renderização dinâmica, CRUD local, filtros e diálogos.
-
-localStorage — Persistência offline de dados e favoritos.
-
-GitHub Pages — Hospedagem estática gratuita.
-
-JSON — Base inicial de receitas antes de personalizações.
+    git add .
+    git commit -m "Atualização final do projeto"
+    git push origin main
