@@ -1,118 +1,72 @@
-# 🇧🇷 Brasil à Mesa
+📘 Brasil à Mesa
 
-Aplicação web estática (HTML, CSS e JavaScript) que reúne e celebra **as receitas regionais brasileiras**, valorizando a cultura e a diversidade gastronômica do país.  
-O projeto funciona **100% offline**, sem APIs externas, utilizando **localStorage** para armazenamento dos dados.
+Catálogo digital de receitas brasileiras por região
 
----
+Aplicação web estática desenvolvida em HTML, CSS e JavaScript, focada em organizar e preservar receitas típicas do Brasil, destacando a importância cultural e gastronômica de cada região.
 
-## 🌎 Conceito e Identidade Visual
+🎯 Objetivo
 
-**Marca:** “Brasil à Mesa”  
-**Tagline:** *Onde cada receita é um pedaço do nosso país.*
+“Brasil à Mesa” foi criado para servir como um catálogo simples, rápido e visualmente agradável de receitas brasileiras, permitindo explorar pratos tradicionais por região, ingredientes, categoria e modo de preparo.
+Além disso, a aplicação reforça o valor cultural da culinária brasileira através de textos e histórias regionais.
 
-A aplicação adota uma identidade visual inspirada na culinária brasileira:
-- **Cor principal:** Verde-terra (sofisticado e natural)  
-- **Cor secundária:** Terracota (calor, barro, fogão a lenha)  
-- **Cor de acento:** Dourado suave (milho, azeite de dendê, sol)  
-- **Neutros:** Bege e branco quebrado (linho, papel kraft)
+🌎 Funcionalidades Principais
 
-**Tipografia:**  
-- Títulos: *Playfair Display* (elegante e clássica)  
-- Texto corrido: *Inter* (limpa e legível)
+🔍 Exploração e filtros
 
----
+Busca por nome, ingrediente ou categoria.
 
-## 🖥️ Funcionalidades
+Filtro por região (Norte, Nordeste, Centro-Oeste, Sudeste e Sul).
 
-- **Catálogo de receitas** organizadas por região (Norte, Nordeste, Centro-Oeste, Sudeste e Sul)  
-- **CRUD completo:** criar, editar e excluir receitas  
-- **Favoritos:** salvar receitas preferidas  
-- **Filtro e busca:** por nome, ingrediente ou região  
-- **SPA (Single Page Application):** páginas internas com hash-router  
-  - Início  
-  - Receitas  
-  - Regiões  
-  - Histórias  
-  - Sobre  
-- **Responsivo:** adapta-se a telas de celular, tablet e desktop  
-- **Persistência local:** dados armazenados no navegador (localStorage)
+Filtro “★ Salvos” para ver apenas receitas favoritas.
 
----
+📖 Gestão das receitas
 
-## ⚙️ Estrutura do Projeto
+Criar novas receitas diretamente pela interface.
 
-📁 brasil-a-mesa/
-├── index.html # Estrutura da aplicação e navegação SPA
-├── styles.css # Identidade visual e layout
-├── app.js # Lógica de CRUD, filtros, favoritos e rotas
-├── data/
-│ └── receitas.json # Base inicial de receitas regionais
-├── assets/
-│ └── hero.jpg # Imagem principal do site (hero section)
-└── README.md # Documentação do projeto
+Editar receitas existentes.
 
----
+Excluir receitas.
 
-## 🧩 Rodar localmente
+Dados armazenados no navegador via localStorage (offline e persistente).
 
-1. No terminal, entre na pasta do projeto  
-2. Execute:
+⭐ Favoritos
 
-```bash
-python -m http.server 5500
+Marcar/desmarcar receitas como favoritas.
 
-Abra no navegador:
-👉 http://localhost:5500
+Estado salvo localmente (persistente mesmo após fechar o navegador).
 
-☁️ Publicação
+📘 Leitura avançada do preparo
 
-GitHub Pages:
-Hospedado diretamente no GitHub Pages.
+Cards mostram apenas um resumo.
 
-🔗 Link: https://leoschiavinatto.github.io/brasil-a-mesa/
+Botão “Ver preparo completo” abre um dialog estilizado.
 
+Quebra de linha real (white-space: pre-wrap).
 
-🧱 Diagramas UML
-Diagrama de Classes
-classDiagram
-  class Receita {
-    +string id
-    +string nome
-    +string regiao
-    +string categoria
-    +string ingredientes
-    +string preparo
-  }
+Botão “Copiar preparo” para área de transferência.
 
-  class Regiao {
-    +string nome
-    +list<Receita> receitas
-  }
+🗺️ Navegação por regiões
 
-  Regiao --> Receita
+Página dedicada “Regiões”.
 
-Diagrama de Sequência (Salvar Receita)
-sequenceDiagram
-  actor Usuário
-  participant Form
-  participant App as app.js
-  participant LS as localStorage
+Cada botão exibe receitas específicas daquela região.
 
-  Usuário->>Form: Preenche e clica "Salvar"
-  Form->>App: Envia dados da nova receita
-  App->>LS: Armazena dados
-  App->>Form: Atualiza lista renderizada
+📚 Histórias e Sobre
 
-📜 Créditos e Contexto Acadêmico
+Textos culturais explicando origem e importância de pratos de cada região.
 
-Projeto desenvolvido como parte da disciplina Extensão VI – UniFil
-Tema: “Brasil à Mesa: onde cada receita é um pedaço do nosso país.”
-Objetivo: demonstrar o uso de tecnologias web estáticas (HTML, CSS e JS) para promover cultura e gastronomia.
+Página “Sobre o projeto” com objetivo e tecnologias.
 
-Autor: Leonardo Schiavinatto
-Ano: 2025
+🧩 Tecnologias utilizadas
 
-✅ Licença
+HTML5 — Estrutura da aplicação (SPA simples via hash).
 
-Uso educacional e demonstrativo.
-Código-fonte aberto para consulta e replicação acadêmica.
+CSS3 (tema escuro, paleta inspirada no Brasil, hero com imagem de fundo, grid de cards).
+
+JavaScript (ES6+) — Renderização dinâmica, CRUD local, filtros e diálogos.
+
+localStorage — Persistência offline de dados e favoritos.
+
+GitHub Pages — Hospedagem estática gratuita.
+
+JSON — Base inicial de receitas antes de personalizações.
