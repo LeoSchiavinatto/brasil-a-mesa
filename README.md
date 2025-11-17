@@ -27,129 +27,194 @@
 
 ---
 
+## 🇧🇷 Brasil à Mesa
 
-🇧🇷 Brasil à Mesa
-Catálogo interativo de receitas brasileiras por região
+**Brasil à Mesa** é um catálogo interativo de receitas brasileiras organizado por região, valorizando a diversidade da culinária nacional.
 
-Autor: Leonardo Schiavinatto da Silva
-Projeto desenvolvido individualmente para as disciplinas de Extensão da UniFil.
+O projeto foi desenvolvido individualmente para as disciplinas de Extensão da UniFil, com foco em:
 
-🎯 Visão Geral
+- Experiência de uso simples e intuitiva
+- Exploração da cultura gastronômica regional
+- Boas práticas em desenvolvimento web front-end
 
-Brasil à Mesa é uma aplicação web dedicada a apresentar receitas tradicionais das cinco regiões do Brasil, valorizando a cultura gastronômica nacional.
+---
 
-A aplicação funciona 100% no navegador, com persistência local via localStorage, permitindo:
+## 🎯 Visão Geral
 
-Explorar receitas por região.
+A aplicação funciona **100% no navegador**, sem backend, utilizando **LocalStorage** para persistência de dados.
 
-Buscar por nome, ingrediente ou categoria.
+Com ela, é possível:
 
-Criar, editar e excluir receitas.
+- Explorar receitas por região do Brasil  
+- Buscar por nome, ingrediente ou categoria  
+- Criar, editar e excluir receitas (CRUD completo)  
+- Salvar e acessar favoritos  
+- Ler o preparo completo em um diálogo dedicado (com quebra de linha real e botão de “copiar preparo”)  
+- Alternar entre **tema claro e escuro**  
+- Navegar por páginas de **Histórias** e **Sobre**, com conteúdo cultural contextualizado  
+- Ver estatísticas locais no **Perfil** (quantidade de receitas e favoritos) e limpar todos os dados salvos no navegador  
 
-Salvar e acessar favoritos.
+---
 
-Ler o preparo completo em diálogo dedicado, com quebra de linha real e opção de copiar.
+## 👨‍💻 Desenvolvedor
 
-Navegar pelas páginas de Histórias e Sobre, com conteúdo cultural contextualizado.
+**Leonardo Schiavinatto da Silva**  
+Responsável por:
 
-👨‍💻 Desenvolvedor
+- Modelagem
+- Implementação
+- Estilização
+- Testes
+- Publicação (GitHub Pages e Oracle Cloud)
 
-Leonardo Schiavinatto da Silva
-Desenvolvimento completo (modelagem, implementação, estilização, testes, publicação).
+---
 
-🧩 Funcionalidades
-Página Inicial
+## 🧩 Funcionalidades
 
-Hero com imagem temática e chamada principal.
+### 📌 Página Inicial
+- Hero em tela com imagem temática e chamada principal
+- Chamada para explorar receitas com foco em navegação simples
 
-Receitas
+### 📌 Receitas
+- Busca dinâmica por:
+  - Nome
+  - Ingredientes
+  - Categoria
+- Filtro por região (Norte, Nordeste, Centro-Oeste, Sudeste, Sul)
+- Marcar/desmarcar como favorito (★)
+- Criar, editar e excluir receitas
+- Exibição de resumo do preparo no card
+- Leitura do preparo completo em diálogo com:
+  - Quebra de linha real (`white-space: pre-wrap`)
+  - Botão de copiar texto para a área de transferência
 
-Busca dinâmica.
+### 📌 Regiões
+- Navegação por região:
+  - Norte
+  - Nordeste
+  - Centro-Oeste
+  - Sudeste
+  - Sul
+- Lista de receitas automaticamente filtradas pela região selecionada
 
-Filtro por região.
+### 📌 Histórias
+- Textos originais sobre a cultura gastronômica de cada região
+- Enfoque em contexto cultural, tradições e hábitos alimentares
 
-Marcar como favorito (★).
+### 📌 Sobre
+- Explicação do propósito do projeto
+- Impacto cultural e motivação
+- Tecnologias utilizadas e contexto acadêmico
 
-Criar, editar e excluir receitas.
+### 📌 Perfil Local
+- Exibição de estatísticas:
+  - Quantidade total de receitas
+  - Quantidade de receitas salvas como favoritas
+- Opção de limpar totalmente os dados armazenados no navegador (reset do LocalStorage)
 
-Dialog de leitura com preparo completo e botão de copiar texto.
+### 🌗 Tema Claro/Escuro
+- Alternância entre tema **escuro** e **claro** via botão no topo
+- Preferência de tema salva em `localStorage` (`brasil_a_mesa_theme`)
+- Aplicação automática do tema escolhido na próxima visita
 
-Regiões
+---
 
-Navegação por Norte, Nordeste, Centro-Oeste, Sudeste e Sul.
+## 🛠 Tecnologias Utilizadas
 
-Lista automática de receitas filtradas.
+- **HTML5**
+  - Estrutura semântica
+  - SPA simples por hash (`#inicio`, `#receitas`, etc.)
 
-Histórias
+- **CSS3**
+  - Tema “Brasil à Mesa” (cores, tipografia, hero, grid)
+  - Layout responsivo (mobile/desktop)
+  - Estilização de cards, dialogs e toolbar
+  - Variáveis CSS para facilitar tema claro/escuro
 
-Textos originais sobre cultura gastronômica de cada região.
+- **JavaScript (ES6+)**
+  - CRUD completo em memória + LocalStorage
+  - Filtros, buscas e favoritos
+  - Diálogos de leitura e edição
+  - Navegação tipo SPA por hash
+  - Manipulação de DOM sem frameworks
 
-Sobre
+- **Armazenamento**
+  - `localStorage` para:
+    - Base de receitas (`receitas_v3`)
+    - Favoritos (`receitas_favs_v1`)
+    - Tema selecionado (`brasil_a_mesa_theme`)
 
-Explicação do propósito, impacto cultural e tecnologias usadas.
+- **Outras tecnologias**
+  - JSON (base inicial de receitas)
+  - Git + GitHub (versionamento)
+  - GitHub Pages (deploy estático)
+  - Oracle Cloud (VM com Nginx para hospedagem opcional)
 
-Perfil Local
+---
 
-Estatísticas de receitas e favoritos.
+## 📁 Estrutura do Projeto
 
-Limpeza total dos dados do navegador.
-
-🛠 Tecnologias Utilizadas
-
-HTML5 (SPA por hash)
-
-CSS3 (tema “Brasil à Mesa”, responsividade, hero, grid, dialogs)
-
-JavaScript (ES6+) (CRUD completo, filtros, favoritos, diálogos, navegação)
-
-localStorage
-
-JSON
-
-Git + GitHub
-
-GitHub Pages (deploy estático)
-
-Oracle Cloud (servidor Nginx opcional)
-
-📁 Estrutura do Projeto
+```bash
 brasil-a-mesa/
 │
-├── index.html
-├── styles.css
-├── app.js
+├── index.html       # Estrutura principal da SPA
+├── styles.css       # Estilos globais, tema, layout e componentes
+├── app.js           # Lógica da aplicação (CRUD, filtros, navegação)
 │
 ├── data/
-│   └── receitas.json
+│   └── receitas.json  # Base inicial de receitas
 │
 └── assets/
-    └── hero.jpg
+    └── hero.jpg       # Imagem principal do hero
+🧪 Como Executar Localmente
+Método rápido (sem servidor)
+Clone ou baixe o repositório
 
-🚀 Como Executar Localmente
-Método rápido (sem servidor):
+Abra o arquivo index.html diretamente no navegador
 
-Abra o arquivo index.html no navegador.
+Alguns navegadores podem bloquear o fetch do receitas.json via file://.
+Nesse caso, use um servidor local (abaixo).
 
-Método recomendado (para evitar bloqueios de JSON):
-Node.js
+Método recomendado (servidor local)
+Com Node.js
+bash
+Copiar código
 npx serve .
+# ou
+npx http-server .
+Depois, acesse:
 
-Python
+text
+Copiar código
+http://localhost:3000
+# ou a porta exibida pelo comando
+Com Python (3.x)
+bash
+Copiar código
 python -m http.server 5500
-# Acesse: http://localhost:5500
-
+# Acesse:
+# http://localhost:5500
 🌐 Publicações
-GitHub Pages
+🔵 GitHub Pages
+A aplicação está disponível publicamente em:
 
 https://leoschiavinatto.github.io/brasil-a-mesa/
 
-Oracle Cloud
+🟧 Oracle Cloud
+Aplicação também pode ser hospedada em uma VM na Oracle Cloud, com:
 
-Aplicação também hospedada em uma VM com Nginx.
-IP público: (substituir pelo seu IP quando subir)
+Servidor Nginx configurado para servir o conteúdo estático do projeto
+
+Deploy via git clone ou cópia dos arquivos para o diretório raiz do servidor
+
+IP público: (substituir pelo IP público da instância quando configurado)
 
 📊 Diagramas UML
-Casos de Uso
+A modelagem do sistema foi documentada usando diagramas UML, contemplando casos de uso e sequência.
+
+Diagrama de Casos de Uso
+mermaid
+Copiar código
 graph LR
   U[«Ator» Usuário]
 
@@ -170,8 +235,11 @@ graph LR
   U --> UC5
   U --> UC6
   U --> UC7
+Este diagrama representa as principais interações do usuário com o sistema.
 
-Sequência — Carregamento e Criação
+Diagrama de Sequência — Carregamento e Criação
+mermaid
+Copiar código
 sequenceDiagram
   actor U as Usuário
   participant UI as Interface
@@ -194,12 +262,32 @@ sequenceDiagram
   U->>UI: Criar receita
   UI->>LS: Atualiza base
   UI->>UI: Atualiza lista
+Este diagrama mostra:
 
-🔄 Atualizar no GitHub
+Fluxo de inicialização da aplicação
+
+Leitura do localStorage
+
+Fallback para o arquivo receitas.json
+
+Atualização da base ao criar novas receitas
+
+🔄 Fluxo de Atualização do Projeto
+Para atualizar o projeto e refletir mudanças no GitHub Pages:
+
+bash
+Copiar código
 git add .
 git commit -m "README atualizado + melhorias gerais"
 git push origin main
-
 📝 Licença
+Projeto desenvolvido com finalidade educacional e acadêmica.
+Pode ser utilizado como referência para estudos em:
 
-Projeto para uso educacional e acadêmico.
+Desenvolvimento web front-end
+
+SPA simples sem frameworks
+
+Uso de LocalStorage
+
+Documentação com UML
