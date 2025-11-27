@@ -27,7 +27,7 @@
   --panel:#ffffff;
   --card:#ffffff;
   --card-elev:#f0ebe0;
-  --text:#1f1b16;
+  --text:#1f1b16;        /* <--- texto escuro para temas claros */
   --muted:#6b6254;
   --line:#ddd2c4;
 
@@ -209,9 +209,17 @@ body{
   transition:transform .15s ease, box-shadow .15s ease;
 }
 .card:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.35) }
+
+/* <-- Ajuste: títulos dos cards agora respeitam var(--text) -->
+   Isso garante contraste correto tanto no tema escuro quanto no claro.
+*/
 .card h3{
   font-family: "Playfair Display", "Times New Roman", Georgia, serif;
-  color:var(--offwhite); margin:.2rem 0
+  color:var(--text);
+  margin:.2rem 0;
+  /* leve différenciação visual */
+  font-size:1.05rem;
+  line-height:1.18;
 }
 .card .meta{ color:var(--muted); font-size:.86rem }
 .tags{ display:flex; gap:.45rem; flex-wrap:wrap }
@@ -275,12 +283,16 @@ dialog{
   width:min(720px, 92vw);
 }
 
+/* <-- ajuste: títulos de leitura seguem var(--text) -->
+   evita branco sobre claro no tema light.
+*/
 .read h3{
   margin:0 0 1rem 0;
   font-family:"Playfair Display","Times New Roman",serif;
-  color:var(--offwhite);
+  color:var(--text);
 }
 
+/* corpo de leitura permanece em muted para hierarquia */
 #read-text{
   line-height:1.65;
   color:var(--muted);
@@ -329,7 +341,7 @@ dialog{
 .profile h2{
   margin:0 0 .5rem 0;
   font-family:"Playfair Display","Times New Roman",serif;
-  color:var(--offwhite);
+  color:var(--text);
 }
 .profile p{
   margin:.2rem 0 .8rem 0;
@@ -379,7 +391,7 @@ dialog{
   font-family:"Playfair Display","Times New Roman",serif;
   font-size:1.8rem;
   margin:0 0 1rem 0;
-  color:var(--offwhite);
+  color:var(--text); /* <-- alinhado com o tema */
 }
 .section-subtitle{
   font-size:1.1rem;
@@ -394,7 +406,7 @@ dialog{
 .prose h3{
   font-family:"Playfair Display","Times New Roman",serif;
   margin:.2rem 0 .4rem 0;
-  color:var(--offwhite);
+  color:var(--text);
 }
 .prose p{
   margin:.2rem 0;
@@ -459,4 +471,3 @@ textarea:focus-visible{
   outline: 0;
   box-shadow: 0 0 0 2px var(--gold) inset;
 }
-
